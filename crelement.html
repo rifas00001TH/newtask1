@@ -1,0 +1,104 @@
+<style>
+    #btn1
+    {
+     background-color: aqua;
+     border: none;
+     border: radius 5px;
+     text-align: center;
+     border-radius: 5px;
+     cursor: pointer;
+
+     
+    }
+    #ab1
+    {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    #ab2
+    {background-color: red;
+      text-align: center;
+      cursor: pointer;
+
+    }
+    #ab3{
+      background-color: red;
+      text-align: center;
+      cursor: pointer;
+    }
+    #aq{
+      text-align: center;
+    }
+    .hidden{
+      display: none;
+    }
+
+</style><div class="asd">
+<form action="">
+  <h1>Student Form</h1>
+  <table border="1" id="ab1">
+    <tr><td>Name</td><td>Rifas</td></tr>
+    <tr><td>Age</td><td>23</td></tr>
+    <tr>
+      <td>Gender</td>
+      <td>Male<input type="radio" > Female <input type="radio" ></td>
+    </tr>
+    <tr><td>Course</td>
+    <td>
+      <select>
+        <option >Java script</option>
+        <option >My SQL</option>
+        <option >cSS</option>
+        <option >Node JS</option>
+      </select>
+    </td>
+  </tr>
+  <tr><td>E-mail</td><td>abutebab1414@gmail.com</td></tr>
+  <tr ><td colspan="2" id="btn1">Save</td></tr>
+  </table>
+</form>
+</div>
+<div class="aaa hidden">
+  <form action="" >
+    <table border="n" id="aq">
+      <tr>
+      <td>Name</td>
+      <td>Age</td>
+      <td>Course</td>
+      <td>Gender</td>
+      <td>E-Mail</td>
+      <td>Action</td>
+    </tr>
+    <tr id="bbb">
+      <td>Rifas</td>
+      <td>22</td>
+      <td>Node JS</td>
+      <td>Male</td>
+      <td >abutebab1414@gmail.com</td>
+      <td id="ab2" onclick="deleteElement()">Delete</td>
+    </tr>
+    <tr>
+      <td>Tayeb</td>
+      <td>23</td>
+      <td>Python</td>
+      <td>Male</td>
+      <td>rinuma@gmail.com</td>
+      <td id="ab3" onclick="deleteElement()">Delete</td>
+    </tr>
+    </table>
+  </form>
+</div>
+<script>
+  var btn=document.getElementById("btn1")
+  var div1=document.querySelector(".aaa")
+  var del1=document.getElementById("ab2")
+  var del1=document.getElementById("ab3")
+  btn.addEventListener("click",function()
+  {
+    div1.classList.remove("hidden")
+  })
+  function deleteElement()
+  {
+    event.target.parentElement.remove()
+  }
+</script>

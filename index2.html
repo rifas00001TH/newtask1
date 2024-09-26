@@ -1,0 +1,29 @@
+<style>
+    .red{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+    .black
+    {
+        background-color:black;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<div class="red"></div>
+<button id="btn1">click1</button>
+<button id="btn2">click2</button>
+<script>
+    var div=document.querySelector(".red")
+    var btn1=document.getElementById("btn1")
+    var btn2=document.getElementById("btn2")
+     btn1.addEventListener("click",function()
+     {
+       div.classList.add("black")
+     })
+     btn2.addEventListener("click",function()
+     {
+        div.classList.remove("black")
+     })
+</script>

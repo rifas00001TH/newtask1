@@ -1,0 +1,72 @@
+<style>
+.popup
+{
+ background-color: black;
+ opacity: 0.5;
+ height: 100%;
+ width: 100%;
+position: absolute;
+top:0;
+left:0;
+z-index:1;
+
+
+
+}
+.popup_sec1
+{
+    background-color: white;
+    color: black;
+    border: black solid 1px;
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+    z-index: 2;
+    margin-top: 10%;
+    margin-left: 40%;
+   
+  
+
+   
+}
+.hidden
+{
+  display: none;
+}
+
+</style>
+
+<button id="abc" onclick="click()">Click</button>
+<div class="popup hidden" id="ac1"></div>
+
+    <div class="popup_sec1 hidden">
+        <p id="a" style="text-align:right; cursor:pointer;">X</p>
+        <P id="b">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Porro provident alias atque facilis fugiat optio suscipit voluptate repudiandae,
+             fugit quod cupiditate minima ipsam enim commodi.</P>
+    </div>
+
+
+<script>
+    var btn=document.getElementById("abc")
+    var pdi=document.querySelector(".popup_sec1")
+    var x=document.getElementById("a")
+    var popup =document.getElementById("ac1")
+     
+    btn.addEventListener("click",function()
+    {
+      pdi.classList.remove("hidden")
+      popup.classList.remove("hidden")
+
+
+    })
+    x.addEventListener("click",function()
+    {
+      pdi.classList.add("hidden")
+     popup.classList.add("hidden")
+    })
+   
+
+</script>
+
